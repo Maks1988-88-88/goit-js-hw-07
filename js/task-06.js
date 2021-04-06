@@ -1,15 +1,16 @@
-const validation = document.querySelector('#validation-input');
+const validation = document.querySelector("#validation-input");
 
-const validPassword = (e) => {
-    if (Number(validation.dataset.length) === e.currentTarget.value.length) {
-        validation.classList.remove('invalid');
-        validation.classList.add('valid');
-    }
-    else {
-        validation.classList.remove('valid');
-        validation.classList.add('invalid');
-        
-    }
+const addRemovePassword = (remove, add) => {
+  validation.classList.remove(`${remove}`);
+  validation.classList.add(`${add}`);
 };
 
-validation.addEventListener('blur', validPassword)
+const validPassword = (e) => {
+  if (Number(validation.dataset.length) === e.currentTarget.value.length) {
+    addRemovePassword("invalid", "valid");
+  } else {
+    addRemovePassword("valid", "invalid");
+  }
+};
+
+validation.addEventListener("blur", validPassword);
