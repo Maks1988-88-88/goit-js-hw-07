@@ -16,6 +16,9 @@ const images = [
   },
 ];
 
+// ================1 вариант============
+
+
 const allImages = document.querySelector("ul#gallery");
   allImages.style.display = "flex";
   allImages.style.flexDirection = "column";
@@ -30,6 +33,8 @@ console.log(addImg);
 
 allImages.insertAdjacentHTML("afterbegin", addImg);
 
+
+// ================2 вариант============
 
 // const addImg = () => {
 //   const allImages = document.querySelector("ul#gallery");

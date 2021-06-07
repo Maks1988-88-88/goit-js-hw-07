@@ -9,6 +9,7 @@ const ingredients = [
 
 const allIngredients = document.querySelector("ul#ingredients");
 
+// ================1 вариант============
 
 const addIngredient = ingredients.map( option => {
        const createingredient = document.createElement("li");
@@ -17,6 +18,8 @@ const addIngredient = ingredients.map( option => {
 });
 console.log(addIngredient);
 allIngredients.append(...addIngredient);
+
+// ================2 вариант============
 
 // const buildIngredients = () => {
 //   const allIngredients = document.querySelector("ul#ingredients");
